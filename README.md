@@ -47,6 +47,13 @@ Blackjack-Game/
 2. Load the `blackjack.cpp` file.  
 3. Compile and run from the Turbo C++ IDE.  
 
+## ⚠️ Known Issues & Security Considerations
+
+- **🔑 Passwords are stored in plain text**: The game saves usernames and passwords in a binary file (`BJUSER.dat`) **without encryption**, making it insecure. A future improvement would be to **hash passwords** before storing them.
+- **❌ No password recovery option**: If a user forgets their password, there's no way to reset it.
+- **🔓 User data can be modified manually**: Since account balances are stored locally in `BJUSER.dat`, someone with access to the file can **manually edit** their balance. Future improvements could include **encryption** or **checksum validation**.
+- **📂 Missing file issues**: If `BJUSER.dat` is deleted or corrupted, the game may crash. A fix could be to add **automatic file creation** when missing.
+
 ## 📜 License  
 This project is licensed under the **MIT License**. See the `LICENSE` file for details.  
 
@@ -56,7 +63,10 @@ The original **Class 12 board submission document** is included in the `docs/` f
 ## 🎯 Future Improvements  
 - 🖥️ Add a **Graphical User Interface (GUI)** for a better user experience.  
 - 👥 Implement **multiplayer mode**.  
-- 🔄 Improve **randomness** in shuffling and card dealing.  
+- 🔄 Improve **randomness** in shuffling and card dealing.
+- **Implement password hashing (e.g., SHA-256)**
+- **Add password reset functionality**
+- **Encrypt user data to prevent manual tampering** 
 
 ## 📬 Contact  
 If you have any questions or suggestions, feel free to open an **issue** or **pull request** in this repository!  
