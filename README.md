@@ -4,7 +4,7 @@ This is a **C++ implementation of the classic casino game Blackjack**. The game 
 
 ## 📁 Repository Structure  
 ```
-Blackjack-Game/  
+Blackjack-Card-Game/  
 │── src/  
 │   ├── blackjack.cpp      # Main game code  
 │── docs/  
